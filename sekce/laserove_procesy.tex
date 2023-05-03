@@ -6,16 +6,49 @@ Laserové procesy jsou procesy, při kterých jsou zapojeny lasery. Tyto procesy
 
 \subsection{Příklad 3.1.1 - výpočet}
 \begin{zadani}
-
+    Yttrium-Aluminium-Granát laser dotovaný neodymem, YAG:Nd3+, 
+    má rozdíl energií mezi horní a spodní laserovou hladinou 1,17 eV. 
+    Určete vlnovou délku příslušného laserového záření a stanovte
+    jaké oblasti spektra odpovídá.
 \end{zadani}
 
 
-V této sekci je uveden výpočet pro příklad 3.1.1. Jsou uvedeny použité metody a vypočtené výsledky.
+Energie vyzářeného fotonu je přímo svázaná s vlnovou délkou takového záření:
+\begin{align*}
+  \lambda &= \frac{hc}{\Delta E} \\
+  \lambda &= \frac{\consthval\constcval}{1,17\cdot \consteval} \\
+  \lambda &= \qty{1,06e-6}{\meter}
+\end{align*}
+
+Tato vlnová délka odpovídá infračervené oblasti elektromagnetického spektra.
+
 
 \subsection{Příklad 3.1.4 - výpočet}
 \begin{zadani}
-
+    Laserový svazek o průměru d = 0,1 mm  dopadl kolmo na destičku z
+    křemíku. Výkon přenášený ve svazku je P = 10 kW.  Stanovte plošnou 
+    hustotu výkonu laserového záření po průchodu destičkou o tloušťce 
+    x = 2 mm,  použijeme-li záření o vlnové délce \(\lambda\)  = 1,06 µm, součinitel 
+    reflexe uvažujme  R = 0,28  a absorpční součinitel \(\alpha(\lambda)\)  = 5 cm-1.
+   Rozhodněte, zda na dané vlnové délce lze křemík použít pro optické 
+    systémy
 \end{zadani}
 
 
-V této sekci je uveden výpočet pro příklad 3.1.4. Jsou uvedeny použité metody a vypočtené výsledky.
+Zde se kombinují dva jevy, nejprve se část intenzity paprsku odrazí zpět a následně je část pohlcena materiálem. Pro stanovení hustoty výkonu po průchodu systémem musíme zohlednit oba jevy. 
+
+Plošná hustota výkonu na začátku:
+\[
+    N_{S_{0} } =\frac{P_{0}}{S}=\frac{4P_{0}}{\pi d^2} = \qty{1,27e12}{\watt\per\square\meter} 
+\]
+Odečtení odraženého výkonu: 
+\[
+    N_{S_{0} }^\prime = N_{S_{0} } (1-R)=\qty{9,144e11}{\watt\per\square\meter}
+\]
+Odečtení absorbovaného výkonu: 
+\begin{align*}
+  N_{S} &= N_{S_{0} }^\prime\cdot \exp(-\alpha(\lambda)x) \\
+  N_{S} &= \num{9,144e11}\cdot \exp(-\num{5e2}\cdot \num{2e-3}) \\
+  N_{S} &= \qty{3,36e11}{\watt\per\square\meter}
+\end{align*}
+ 
