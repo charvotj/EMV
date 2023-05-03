@@ -4,13 +4,15 @@
 
 Iontové procesy jsou procesy, při kterých jsou zapojeny ionty. Tyto procesy mohou být popsány pomocí různých metod, např. Bornovy aproximace nebo Hartreeho-Fockovy metody.
 
-\subsection{Příklad 1.2.1 - výpočet}
+\subsection{Příklad 1.2.1}
 \begin{zadani}
     Srovnejte základní vlastnosti elektronů a iontů.
 \end{zadani}
 
+Elektrony mají vždy záporný náboj a jsou obecně podstatně lehčí a menší než ionty. Díky své nízké hmotnosti se mohou pohybovat velmi vysokými rychlostmi blížícími se rychlosti světla. 
 
-V této sekci je uveden výpočet pro příklad 1.2.1. Jsou uvedeny použité metody a vypočtené výsledky.
+Ionty mohou mít kladný i záporný náboj a jsou větší a těžší. Oproti elektronům mohou také tvořit chemické reakce (jelikož se jedná o celé ionizované atomy nebo molekuly). Lze je použít například i pro depozici tenkých vrstev.
+
 
 \subsection{Příklad 1.2.2 - výpočet}
 \begin{zadani}
@@ -21,6 +23,15 @@ V této sekci je uveden výpočet pro příklad 1.2.1. Jsou uvedeny použité me
     koncentrační profil naznačte graficky. Celková dávka  Q = 1018 m-2 při  
     energie iontů  100 keV
 \end{zadani}
-t
 
-V této sekci je uveden výpočet pro příklad 1.2.2. Jsou uvedeny použité metody a vypočtené výsledky.
+
+Pro implantaci bóru do křemíku při energii iontů \qty{100}{keV} platí:
+
+Rp = \qty{0,2994}{\micro\meter} a \(\Delta\)Rp = \qty{0,0710}{\micro\meter}
+
+Pro stanovení maximální koncentrace vyjdeme z následujícího vztahu:
+\begin{align*}
+  N_{max} &= \frac{Q}{\sqrt{2\pi \Delta R_{p} } } \\
+  N_{max} &= \frac{\num{10e18}}{\sqrt{2\pi \num{0,0710e-6} } } \\
+  N_{max} &= \qty{1,49e21}{\per\meter\cubed}
+\end{align*}
