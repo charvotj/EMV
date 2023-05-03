@@ -6,16 +6,60 @@ Ultraakustické procesy jsou procesy, při kterých jsou zapojeny zvukové vlny.
 
 \subsection{Příklad 3.2.4 - výpočet}
 \begin{zadani}
-
+    Jak velký výkon bude předán destičce o ploše 1 cm2 ponořené ve 
+    vodě, bude-li amplituda kmitů Y = 10-6 m  při kmitočtech 20 kHz a 
+    1 MHz, při kolmém dopadu a úplné absorpci vlnění?
 \end{zadani}
 
 
-V této sekci je uveden výpočet pro příklad 3.2.4. Jsou uvedeny použité metody a vypočtené výsledky.
+Výkon akustických vln závisí na prostředí, kde vlna působí (to určuje rychlost šíření vlnění) a také jeho amplituda. Výkon označíme \(P\) a vyjdeme z následujícího vztahu:
+\begin{align*}
+    P &= \frac{1}{2}\omega^2 Y^2 \rho vS
+\end{align*}
+Dosazení pro \qty{20}{kHz}:
+\begin{align*}
+    P &= \frac{1}{2}(2\pi\cdot \num{20e3})^2 (\num{e-6})^2 \num{1000}\cdot \num{1483}\cdot \num{1e-4} \\
+    P &= \qty{1,17}{\watt} \\
+\end{align*}
+Dosazení pro \qty{1}{MHz}:
+\begin{align*}
+    P &= \frac{1}{2}(2\pi\cdot \num{1e6})^2 (\num{e-6})^2 \num{1000}\cdot \num{1483}\cdot \num{1e-4} \\
+    P &= \qty{2,926}{\kilo\watt} \\
+\end{align*}
 
 \subsection{Příklad 3.2.7 - výpočet}
 \begin{zadani}
-
+    Vypočtěte jak velká část intenzity dopadajícího ultrazvukového vlnění 
+    projde do oceli a jak velká část se odrazí při kolmém dopadu 
+    akustické vlny na rozhraní  voda – ocel,  resp.  vzduch – ocel
 \end{zadani}
 
 
-V této sekci je uveden výpočet pro příklad 3.2.7. Jsou uvedeny použité metody a vypočtené výsledky.
+Pro rozhraní libovolných dvou prostředí lze stanovit součinitel odrazu, který udává, jak velká část intenzity vlnění se odrazí zpět, zbytek naopak projde. 
+Tento součinitel závisí na akustickém vlnovém odporu obou prostředí. 
+
+Výpočet akustického vlnového odporu:
+\[
+    Z_{a} = \rho v
+\]
+\begin{align*}
+  \text{Vz}&\text{duch:} & \text{Vo}&\text{da:} & \text{Oc}&\text{el:} \\
+  Z_{vz} &= \rho_{vz} v_{vz} & Z_{vo} &= \rho_{vo} v_{vo} & Z_{oc} &= \rho_{oc} v_{oc} \\
+  Z_{vz} &= \num{1,276}\cdot\num{332} & Z_{vo} &= \num{1000}\cdot\num{1483} & Z_{oc} &= \num{7800}\cdot\num{6000} \\
+  Z_{vz} &= \qty{423.6}{\kilo\gram\per\square\meter\per\second} & Z_{vo} &= \qty{1.483e6}{\kilo\gram\per\square\meter\per\second} & Z_{oc} &= \qty{4.68e7}{\kilo\gram\per\square\meter\per\second} \\
+\end{align*}
+
+Koeficienty odrazu:
+\begin{align*}
+  R_{vo-oc} &= \left( \frac{Z_{vo}-Z_{oc}}{Z_{vo}+Z_{oc}} \right)^2 \\
+  R_{vo-oc} &= \left( \frac{\num{1,483e6}-\num{4,68e7}}{\num{1,483e6}+\num{4,68e7}} \right)^2 \\
+  R_{vo-oc} &= \num{0,881} = \qty{88,1}{\percent}  
+\end{align*}
+Na rozhraní voda--ocel se odrazí \qty{88,1}{\percent} intenzity vlnění, zbylých \qty{11,9}{\percent} projde dále.
+
+\begin{align*}
+    R_{vo-oc} &= \left( \frac{Z_{vz}-Z_{oc}}{Z_{vz}+Z_{oc}} \right)^2 \\
+    R_{vo-oc} &= \left( \frac{\num{423,6}-\num{4,68e7}}{\num{423,6}+\num{4,68e7}} \right)^2 \\
+    R_{vo-oc} &= \num{1} = \qty{100}{\percent}  
+\end{align*}
+Na rozhraní vzduch--ocel se odrazí téměř \qty{100}{\percent} intenzity vlnění.
