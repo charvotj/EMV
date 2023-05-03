@@ -1,10 +1,19 @@
 \documentclass{article}
 
+\usepackage[czech]{babel}
+
+% pro specifikaci formátu datumu
+\usepackage{datetime}
+\newdateformat{czdate}{\THEDAY.\THEMONTH.\:\THEYEAR}
+% použití: \czdate\today
+
+
+
 \begin{document}
 
 \title{Samostatná práce II – BPC-EMV2}
-\author{Vaše jméno}
-\date{\today}
+\author{Jakub Charvot}
+\date{\czdate\today}
 \maketitle
 
 \section{Úvod}
