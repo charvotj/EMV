@@ -19,8 +19,14 @@ Po dosazení dostáváme:
 \[
     j_{eT} =\qty{3155}{\ampere\per\square\meter}
 \]
-TODO: nvm :(
-
+Takto vypočtená hodnota odpovídá emisnímu proudu samotného wolframového vlákna, bez působení el. pole. Působením napětí můžeme proudovou hustotu výrazně zesílit, platí zde následující vztah:
+\begin{align*}
+    j_{eTE} &= A T^2 \exp\left(-\frac{W-\Delta W}{kT}\right) \\
+    j_{eTE} &= A T^2 \exp\left(-\frac{W}{kT}\right) \cdot \exp\left(\frac{\Delta W}{kT}\right) \\
+    j_{eTE} &= j_{eT} \cdot \exp\left(\frac{\Delta W}{kT}\right)= j_{eT} \cdot \exp\left(\frac{0,44\sqrt{E} }{T}\right)\\
+    j_{eTE} &= \num{3155}\exp\left(\frac{0,44\sqrt{\num{2e5}} }{\num{2500}}\right) \\
+    j_{eTE} &= \qty{3413}{\ampere\per\square\meter }
+\end{align*}
 
 
 
