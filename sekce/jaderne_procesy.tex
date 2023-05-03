@@ -6,17 +6,47 @@ Jaderné procesy jsou procesy, při kterých jsou zapojena jádra atomů. Tyto p
 
 \subsection{Příklad 2.2.1 - výpočet}
 \begin{zadani}
-
+    Stanovte rychlost s jakou se pohybují  tzv. tepelné neutrony
+    při teplotě 25 °C 
 \end{zadani}
 
+Vyjdeme zde z kinetické energie neutronu, ta je rovna jeho energii tepelné:
+\[
+    E=\frac{1}{2}m_{n} v_{n}^{2}=kT 
+\]
+Z této rovnosti vyjádříme rychlost neutronu v závislosti na termodynamické teplotě:
+\begin{align*}
+  v_{n} &= \sqrt{\frac{2kT}{m_{n}}} \\ 
+  v_{n} &= \sqrt{\frac{2\constkval(25+273,15)}{\num{1,674e-27}}} \\ 
+  v_{n} &= \qty{2216}{\meter\per\second}
+\end{align*}
 
-V této sekci je uveden výpočet pro příklad 2.2.1. Jsou uvedeny použité metody a vypočtené výsledky.
 
 \subsection{Příklad 2.2.7 - výpočet}
 \begin{zadani}
-
+    Stanovte kolikrát se zmenší tok tepelných neutronů při průchodu
+    destičkou z kadmia a hliníku o tloušťce 1 mm. Účinný průřez pro
+    kadmium  \(\sigma_{Cd} \)= 2 500.10-28 m2  a pro hliník  \(\sigma_{Al} \)= 0,21.10-28 m2 
 \end{zadani}
 
+Pro vypočtení tohoto příkladu je potřeba stanovit absorbční koeficient obou materiálů:
+\begin{align*}
+    \alpha &= n\sigma \\\\
+    \alpha_{Cd}  &= n_{Cd} \sigma_{Cd} = \num{4,6e28}\cdot \num{2500e-28}= \qty{11500}{\per\meter}\\
+    \alpha_{Al}  &= n_{Al} \sigma_{Al} = \num{6,02e28}\cdot \num{0,21e-28}= \qty{1,26}{\per\meter}
+\end{align*}
 
-V této sekci je uveden výpočet pro příklad 2.2.7. Jsou uvedeny použité metody a vypočtené výsledky.
+Následně využijeme vztah pro stanovení toku neutronů po průchodu vrstvou materiálu tlustou x m:
+\begin{align*}
+    \varphi(x) &= \varphi_{0} \cdot \exp(-\alpha x)\\
+    \frac{\varphi_{0}}{\varphi(x)} &=\frac{1}{\exp(-\alpha x)}
+\end{align*}
+
+Zlomek na posledním řádku přímo odpovídá na naši otázku "kolikrát se zmenší?". Po dosazení hodnot pro oba materiály získáme následující hodnoty:
+\begin{itemize}
+    \item Po průchodu kadmiem se tok zmenší \num{99009} krát. 
+    \item Po průchodu hliníkem pouze \num{1,002} krát.
+\end{itemize}
+
+
 
