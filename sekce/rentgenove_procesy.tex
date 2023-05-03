@@ -6,17 +6,31 @@ Rentgenové procesy jsou procesy, při kterých jsou zapojeny rentgenové záře
 
 \subsection{Příklad 2.1.1 - výpočet}
 \begin{zadani}
-
-\end{zadani}
-
-
-V této sekci je uveden výpočet pro příklad 2.1.1. Jsou uvedeny použité metody a vypočtené výsledky.
-
-\subsection{Příklad 2.1.2 - výpočet}
-\begin{zadani}
     Stanovte nejkratší vlnovou délku rentgenového záření vzniklého 
     po dopadu svazku elektronů na kov. Urychlovací napětí  U = 2 kV
 \end{zadani}
 
 
-V této sekci je veden výpočet pro příklad 2.1.2. Jsou uvedeny použité metody a vypočtené výsledky.
+Nejkratší vlnovou délku bude mít záření s nejvyšší energií, musíme tedy stanovit maximální energii dopadajících elektronů. Ty jsou urychlovány napětím \(U\), bude to tedy vypadat takto:
+\begin{align*}
+  \lambda_{min} &=\frac{hc}{E}=\frac{hc}{qU} \\
+  \lambda_{min} &=\frac{\consthval\cdot\constcval}{\consteval\cdot \num{2e3}}\\
+  \lambda_{min} &= \qty{0,619}{nm}
+\end{align*}
+
+
+\subsection{Příklad 2.1.2 - výpočet}
+\begin{zadani}
+    Stanovte vlnovou délku rentgenového záření pro kterou dosáhne 
+    intenzita záření maxima. Urychlovací napětí  U = 2 kV
+\end{zadani}
+
+
+Ze spektrální charakteristiky vyzářeného rtg. záření bylo empiricky zjištěno, že maximální intenzita záření odpovídá frekvenci, při které má záření energii připbližně 0,6 maximální hodnoty. Upravíme tedy výpočet:
+
+\begin{align*}
+    \lambda_{I_{max}} &=\frac{hc}{0,6E}=\frac{hc}{0,6qU} \\
+    \lambda_{I_{max}} &=\frac{\consthval\cdot\constcval}{0,6\consteval\cdot \num{2e3}}\\
+    \lambda_{I_{max}} &= \qty{1,032}{nm}
+  \end{align*}
+
