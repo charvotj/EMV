@@ -16,6 +16,42 @@
 % odstavce
 \usepackage{parskip}
 
+%====== Units =====
+\usepackage{siunitx}
+\sisetup{inter-unit-product =\ensuremath{\cdot}}
+\sisetup{group-digits = integer}
+\sisetup{group-minimum-digits = 4}
+\sisetup{group-separator=\,}
+\sisetup{output-decimal-marker = {,}}
+\sisetup{exponent-product = \ensuremath{\cdot}}
+\sisetup{separate-uncertainty}
+\sisetup{tight-spacing = false}
+%\sisetup{scientific-notation = true}
+%\sisetup{round-mode=places,round-precision=4}
+%\sisetup{evaluate-expression}
+
+
+% Boltzmannova konstanta
+\newcommand{\constkval}{\num{1.38e-23}}
+\newcommand{\constkunit}{\unit{\joule\per\kelvin}}
+
+% Planckova konstanta
+\newcommand{\consthval}{\num{6.626e-34}}
+\newcommand{\consthunit}{\unit{\joule\second}}
+
+% Rychlost světla
+\newcommand{\constcval}{\num{2.998e8}}
+\newcommand{\constcunit}{\unit{\meter\per\second}}
+
+% Elementární náboj
+\newcommand{\consteval}{\num{1.602e-19}}
+\newcommand{\consteunit}{\unit{\coulomb}}
+
+% Hmotnost elektronu
+\newcommand{\constmeval}{\num{9.109e-31}}
+\newcommand{\constmeunit}{\unit{\kilogram}}
+
+
 
 \begin{document}
 
